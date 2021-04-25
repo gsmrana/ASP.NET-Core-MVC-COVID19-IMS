@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19-IMS", "COVID19-IMS\COVID19-IMS.csproj", "{1160C665-7EAF-4EDD-82E6-CC389BFC66CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1160C665-7EAF-4EDD-82E6-CC389BFC66CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1160C665-7EAF-4EDD-82E6-CC389BFC66CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1160C665-7EAF-4EDD-82E6-CC389BFC66CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1160C665-7EAF-4EDD-82E6-CC389BFC66CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {794C7625-CC39-4346-B725-1D3C1C1905C8}
+	EndGlobalSection
+EndGlobal
