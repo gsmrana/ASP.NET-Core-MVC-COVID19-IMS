@@ -19,7 +19,7 @@ namespace COVID19IMS.Areas.Identity
             {
                 services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("ApplicationDbContextConnection")));
+                        context.Configuration.GetConnectionString("DbConnection")));
 
                 services.AddDefaultIdentity<ApplicationUser>(options =>
                 {

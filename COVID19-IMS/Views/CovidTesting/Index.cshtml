@@ -1,0 +1,113 @@
+﻿@model IEnumerable<COVID19IMS.Data.CovidTesting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Birthday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NationalIdNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HomeAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentBoothNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TesterName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestingResult)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestingDetails)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NationalIdNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentBoothNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TesterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestingResult)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestingDetails)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
