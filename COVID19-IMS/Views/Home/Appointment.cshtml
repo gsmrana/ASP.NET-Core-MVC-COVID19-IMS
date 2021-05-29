@@ -1,0 +1,817 @@
+@{
+    ViewData["Title"] = "Appointment";
+    ViewData["Add-ace-styles"] = true;
+}
+
+<!-- Registration Section Start -->
+<header id="home" class="hero-equal-height overflow-hidden d-flex align-items-center">
+    <div class="container">
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="page-content">
+                    <div class="widget-box">
+                        <div class="widget-header widget-header-blue widget-header-flat">
+                            <h4 class="widget-title">
+                                New COVID-19 Appointment Registration
+                            </h4>
+
+                            <div class="widget-toolbar">
+                                <label>
+                                    <small class="green">
+                                        <b>Validation</b>
+                                    </small>
+
+                                    <input id="skip-validation"
+                                           type="checkbox"
+                                           checked
+                                           class="ace ace-switch ace-switch-4" />
+                                    <span class="lbl middle"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div id="fuelux-wizard-container">
+                                    <div>
+                                        <ul class="steps">
+                                            <li data-step="1" class="active">
+                                                <span class="step">1</span>
+                                                <span class="title">User Information</span>
+                                            </li>
+
+                                            <li data-step="2">
+                                                <span class="step">2</span>
+                                                <span class="title">Verification (OTP)</span>
+                                            </li>
+
+                                            <li data-step="3">
+                                                <span class="step">3</span>
+                                                <span class="title">Payment</span>
+                                            </li>
+
+                                            <li data-step="4">
+                                                <span class="step">4</span>
+                                                <span class="title">Confirmation</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <hr />
+
+                                    <div class="step-content pos-rel">
+                                        <div class="step-pane active" data-step="1">
+                                            <h3 class="lighter block green">
+                                                Enter the following information
+                                            </h3>
+
+                                            <form class="form-horizontal"
+                                                  id="validation-form"
+                                                  method="get">
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="name">Full Name:</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="clearfix">
+                                                            <input type="text"
+                                                                   id="name"
+                                                                   name="name"
+                                                                   class="col-xs-12 col-sm-5" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="email">Email Address:</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="clearfix">
+                                                            <input type="email"
+                                                                   name="email"
+                                                                   id="email"
+                                                                   class="col-xs-12 col-sm-5" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="nid">NID Number:</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="clearfix">
+                                                            <input type="number"
+                                                                   id="nid"
+                                                                   name="nid"
+                                                                   class="col-xs-12 col-sm-5" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-2"></div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="phone">Phone Number:</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="ace-icon fa fa-phone"></i>
+                                                            </span>
+
+                                                            <input type="number" id="phone" name="phone" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-2"></div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="address">Home Address:</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="clearfix">
+                                                            <input type="text"
+                                                                   id="address"
+                                                                   name="address"
+                                                                   class="col-xs-12 col-sm-8" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="hr hr-dotted"></div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="age">Age:</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="clearfix">
+                                                            <input type="number"
+                                                                   id="age"
+                                                                   name="age"
+                                                                   class="col-xs-12 col-sm-1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right">Gender</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div>
+                                                            <label class="line-height-1 blue">
+                                                                <input name="gender"
+                                                                       value="1"
+                                                                       type="radio"
+                                                                       class="ace" />
+                                                                <span class="lbl"> Male</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <div>
+                                                            <label class="line-height-1 blue">
+                                                                <input name="gender"
+                                                                       value="2"
+                                                                       type="radio"
+                                                                       class="ace" />
+                                                                <span class="lbl"> Female</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-2"></div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right">Send me</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div>
+                                                            <label>
+                                                                <input name="subscription"
+                                                                       value="1"
+                                                                       type="checkbox"
+                                                                       class="ace" />
+                                                                <span class="lbl">
+                                                                    Email Report / Certificate
+                                                                </span>
+                                                            </label>
+                                                        </div>
+
+                                                        <div>
+                                                            <label>
+                                                                <input name="subscription"
+                                                                       value="2"
+                                                                       type="checkbox"
+                                                                       class="ace" />
+                                                                <span class="lbl">
+                                                                    Parcel Report / Certificate
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="hr hr-dotted"></div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="state">Select Branch</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <select id="state"
+                                                                name="state"
+                                                                class="select2"
+                                                                data-placeholder="Click to Choose...">
+                                                            <option value="">&nbsp;</option>
+                                                            <option value="BA">Badda</option>
+                                                            <option value="BN">Banani</option>
+                                                            <option value="DM">Dhanmondi</option>
+                                                            <option value="GL">Gulshan</option>
+                                                            <option value="MP">Mirpur</option>
+                                                            <option value="MK">Mohakhali</option>
+                                                            <option value="UT">Uttara</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-2"></div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="platform">Appointment Date</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="clearfix">
+                                                            <select class="input-medium"
+                                                                    id="apdate"
+                                                                    name="apdate">
+                                                                <option value="">
+                                                                    ------/------/------
+                                                                </option>
+                                                                <option value="dt1">04/05/2021</option>
+                                                                <option value="dt2">05/05/2021</option>
+                                                                <option value="dt3">06/05/2021</option>
+                                                                <option value="dt4">07/05/2021</option>
+                                                                <option value="dt5">08/05/2021</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-2"></div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                           for="comment">Comment</label>
+
+                                                    <div class="col-xs-12 col-sm-9">
+                                                        <div class="clearfix">
+                                                            <textarea class="input-xlarge"
+                                                                      name="comment"
+                                                                      id="comment"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-8"></div>
+
+                                                <div class="form-group">
+                                                    <div class="col-xs-12 col-sm-4 col-sm-offset-3">
+                                                        <label>
+                                                            <input name="agree"
+                                                                   id="agree"
+                                                                   type="checkbox"
+                                                                   class="ace" />
+                                                            <span class="lbl">
+                                                                I accept the policy
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="step-pane" data-step="2">
+                                            <div>
+                                                <div class="alert alert-info">
+                                                    <button type="button"
+                                                            class="close"
+                                                            data-dismiss="alert">
+                                                        <i class="ace-icon fa fa-times"></i>
+                                                    </button>
+                                                    <strong>
+                                                        <i class="ace-icon fa fa-info"></i>
+                                                    </strong>
+                                                    . A verification SMS has been sent to your
+                                                    mobile containing and OTP, Please enter the OTP
+                                                    below.
+                                                    <br />
+                                                </div>
+                                            </div>
+
+                                            <div style="margin-top: 20px">
+                                                <form class="form-horizontal"
+                                                      id="verification-form"
+                                                      method="get">
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="otp">Enter OTP:</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <input type="number"
+                                                                       id="otp"
+                                                                       name="otp"
+                                                                       class="col-xs-12 col-sm-2" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="step-pane" data-step="3">
+
+                                            <div>
+                                                <div class="alert alert-info">
+                                                    <button type="button"
+                                                            class="close"
+                                                            data-dismiss="alert">
+                                                        <i class="ace-icon fa fa-times"></i>
+                                                    </button>
+                                                    <strong>
+                                                        <i class="ace-icon fa fa-info"></i>
+                                                    </strong>
+                                                    . Please complete the payment through bKash.
+                                                    <br />
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <h3 class="blue lighter">
+                                                    <strong> bKash Merchant number: 01712345678</strong>
+                                                </h3>
+
+                                                <div style="margin-top: 20px">
+                                                    <form class="form-horizontal"
+                                                          id="payment-form"
+                                                          method="get">
+
+                                                        <div class="form-group">
+                                                            <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                                   for="amount">Amount (BDT):</label>
+
+                                                            <div class="col-xs-12 col-sm-9">
+                                                                <div class="clearfix">
+                                                                    <input type="number"
+                                                                           id="amount"
+                                                                           name="amount"
+                                                                           value="2500"
+                                                                           class="col-xs-12 col-sm-2" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                                   for="bkashtrans">bKash Transaction Id:</label>
+
+                                                            <div class="col-xs-12 col-sm-9">
+                                                                <div class="clearfix">
+                                                                    <input type="text"
+                                                                           id="bkashtrans"
+                                                                           name="bkashtrans"
+                                                                           class="col-xs-12 col-sm-2" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                                   for="countercode">bKash Counter Code:</label>
+
+                                                            <div class="col-xs-12 col-sm-9">
+                                                                <div class="clearfix">
+                                                                    <input type="number"
+                                                                           id="countercode"
+                                                                           name="countercode"
+                                                                           class="col-xs-12 col-sm-2" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="step-pane" data-step="4">
+                                            <div class="center">
+                                                <h1 class="green">Confirmation!</h1>
+                                                <h3>
+                                                    Your appointment has been registered successfully.
+                                                </h3>
+                                                <h3>
+                                                    Appointment details has been sent to you email.
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <div class="wizard-actions">
+                                    <button class="btn btn-prev">
+                                        <i class="ace-icon fa fa-arrow-left"></i>
+                                        Prev
+                                    </button>
+
+                                    <button class="btn btn-success btn-next"
+                                            data-last="Finish">
+                                        Next
+                                        <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /.widget-main -->
+                        </div>
+                        <!-- /.widget-body -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#"
+       id="btn-scroll-up"
+       class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+
+    <!-- basic scripts -->
+    <!--[if !IE]> -->
+    <script src="~/assets-ace/js/jquery.2.1.1.min.js"></script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+      <script src="assets/js/jquery.1.11.1.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery ||
+            document.write(
+                "<script src='~/assets-ace/js/jquery.min.js'>" + "<" + "/script>"
+            );
+    </script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+      <script type="text/javascript">
+        window.jQuery ||
+          document.write(
+            "<script src='assets/js/jquery1x.min.js'>" + "<" + "/script>"
+          );
+      </script>
+    <![endif]-->
+    <script type="text/javascript">
+        if ("ontouchstart" in document.documentElement)
+            document.write(
+                "<script src='~/assets-ace/js/jquery.mobile.custom.min.js'>" +
+                "<" +
+                "/script>"
+            );
+    </script>
+    <script src="~/assets-ace/js/bootstrap.min.js"></script>
+
+    <!-- page specific plugin scripts -->
+    <script src="~/assets-ace/js/fuelux.wizard.min.js"></script>
+    <script src="~/assets-ace/js/jquery.validate.min.js"></script>
+    <script src="~/assets-ace/js/additional-methods.min.js"></script>
+    <script src="~/assets-ace/js/bootbox.min.js"></script>
+    <script src="~/assets-ace/js/jquery.maskedinput.min.js"></script>
+    <script src="~/assets-ace/js/select2.min.js"></script>
+
+    <!-- ace scripts -->
+    <script src="~/assets-ace/js/ace-elements.min.js"></script>
+    <script src="~/assets-ace/js/ace.min.js"></script>
+
+    <!-- inline scripts related to this page -->
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("[data-rel=tooltip]").tooltip();
+
+            $(".select2")
+                .css("width", "200px")
+                .select2({ allowClear: true })
+                .on("change", function () {
+                    $(this).closest("form").validate().element($(this));
+                });
+
+            var $validation = true;
+            $("#fuelux-wizard-container")
+                .ace_wizard({
+                    //step: 2 //optional argument. wizard will jump to step "2" at first
+                    //buttons: '.wizard-actions:eq(0)'
+                })
+                .on("actionclicked.fu.wizard", function (e, info) {
+                    if (info.step == 1 && $validation) {
+                        if (!$("#validation-form").valid()) e.preventDefault();
+                    }
+                    if (info.step == 2 && $validation) {
+                        if (!$("#verification-form").valid()) e.preventDefault();
+                    }
+                    if (info.step == 3 && $validation) {
+                        if (!$("#payment-form").valid()) e.preventDefault();
+                    }
+                })
+                .on("finished.fu.wizard", function (e) {
+                    //location.href = 'index.htm';
+                    console.log("appointment")
+                })
+                .on("stepclick.fu.wizard", function (e) {
+                    //e.preventDefault();//this will prevent clicking and selecting steps
+                });
+
+            //jump to a step
+            /**
+            var wizard = $('#fuelux-wizard-container').data('fu.wizard')
+            wizard.currentStep = 3;
+            wizard.setState();
+            */
+
+            //determine selected step
+            //wizard.selectedItem().step
+
+            //enable disable the validation
+            $("#skip-validation")
+                .on("click", function () {
+                    $validation = this.checked;
+                });
+
+            //documentation : http://docs.jquery.com/Plugins/Validation/validate
+
+            $("#validation-form").validate({
+                errorElement: "div",
+                errorClass: "help-block",
+                focusInvalid: true,
+                ignore: "",
+                rules: {
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5,
+                    },
+                    password2: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password",
+                    },
+                    name: {
+                        required: true,
+                    },
+                    nid: {
+                        required: true,
+                        minlength: 13
+                    },
+                    phone: {
+                        required: true,
+                        minlength: 11
+                    },
+                    url: {
+                        required: true,
+                        url: true,
+                    },
+                    comment: {
+                        required: false,
+                    },
+                    state: {
+                        required: true,
+                    },
+                    platform: {
+                        required: true,
+                    },
+                    subscription: {
+                        required: true,
+                    },
+                    age: {
+                        required: true,
+                    },
+                    gender: {
+                        required: true,
+                    },
+                    apdate: {
+                        required: true,
+                    },
+                    agree: {
+                        required: true,
+                    },
+                },
+
+                messages: {
+                    email: {
+                        required: "Please provide a valid email.",
+                        email: "Please provide a valid email.",
+                    },
+                    password: {
+                        required: "Please specify a password.",
+                        minlength: "Please specify a secure password.",
+                    },
+                    state: "Please choose branch",
+                    subscription: "Please choose at least one option",
+                    gender: "Please choose gender",
+                    agree: "Please accept our policy",
+                },
+
+                highlight: function (e) {
+                    $(e)
+                        .closest(".form-group")
+                        .removeClass("has-info")
+                        .addClass("has-error");
+                },
+
+                success: function (e) {
+                    $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
+                    $(e).remove();
+                },
+
+                errorPlacement: function (error, element) {
+                    if (
+                        element.is("input[type=checkbox]") ||
+                        element.is("input[type=radio]")
+                    ) {
+                        var controls = element.closest('div[class*="col-"]');
+                        if (controls.find(":checkbox,:radio").length > 1)
+                            controls.append(error);
+                        else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
+                    } else if (element.is(".select2")) {
+                        error.insertAfter(
+                            element.siblings('[class*="select2-container"]:eq(0)')
+                        );
+                    } else if (element.is(".chosen-select")) {
+                        error.insertAfter(
+                            element.siblings('[class*="chosen-container"]:eq(0)')
+                        );
+                    } else error.insertAfter(element.parent());
+                },
+
+                submitHandler: function (form) { },
+                invalidHandler: function (form) { },
+            });
+
+            $("#verification-form").validate({
+                errorElement: "div",
+                errorClass: "help-block",
+                focusInvalid: true,
+                ignore: "",
+                rules: {
+                    otp: {
+                        required: true,
+                        minlength: 5,
+                    },
+                },
+
+                messages: {
+                    otp: {
+                        required: "Please enter 5 digit OTP send to your mobile.",
+                    },
+                },
+
+                highlight: function (e) {
+                    $(e)
+                        .closest(".form-group")
+                        .removeClass("has-info")
+                        .addClass("has-error");
+                },
+
+                success: function (e) {
+                    $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
+                    $(e).remove();
+                },
+
+                errorPlacement: function (error, element) {
+                    if (
+                        element.is("input[type=checkbox]") ||
+                        element.is("input[type=radio]")
+                    ) {
+                        var controls = element.closest('div[class*="col-"]');
+                        if (controls.find(":checkbox,:radio").length > 1)
+                            controls.append(error);
+                        else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
+                    } else if (element.is(".select2")) {
+                        error.insertAfter(
+                            element.siblings('[class*="select2-container"]:eq(0)')
+                        );
+                    } else if (element.is(".chosen-select")) {
+                        error.insertAfter(
+                            element.siblings('[class*="chosen-container"]:eq(0)')
+                        );
+                    } else error.insertAfter(element.parent());
+                },
+
+                submitHandler: function (form) { },
+                invalidHandler: function (form) { },
+            });
+
+            $("#payment-form").validate({
+                errorElement: "div",
+                errorClass: "help-block",
+                focusInvalid: true,
+                ignore: "",
+                rules: {
+                    amount: {
+                        required: true,
+                    },
+                    bkashtrans: {
+                        required: true,
+                        minlength: 8
+                    },
+                    countercode: {
+                        required: true,
+                        minlength: 1
+                    },
+                },
+
+                messages: {
+                    amount: {
+                        required: "Please enter valid payment amount.",
+                    },
+                    bkashtrans: {
+                        required: "Please enter bKash 8 digit Transaction Id send to your mobile.",
+                    },
+                    countercode: {
+                        required: "Please enter bKash 1 digit Counter Code send to your mobile.",
+                    },
+                },
+
+                highlight: function (e) {
+                    $(e)
+                        .closest(".form-group")
+                        .removeClass("has-info")
+                        .addClass("has-error");
+                },
+
+                success: function (e) {
+                    $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
+                    $(e).remove();
+                },
+
+                errorPlacement: function (error, element) {
+                    if (
+                        element.is("input[type=checkbox]") ||
+                        element.is("input[type=radio]")
+                    ) {
+                        var controls = element.closest('div[class*="col-"]');
+                        if (controls.find(":checkbox,:radio").length > 1)
+                            controls.append(error);
+                        else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
+                    } else if (element.is(".select2")) {
+                        error.insertAfter(
+                            element.siblings('[class*="select2-container"]:eq(0)')
+                        );
+                    } else if (element.is(".chosen-select")) {
+                        error.insertAfter(
+                            element.siblings('[class*="chosen-container"]:eq(0)')
+                        );
+                    } else error.insertAfter(element.parent());
+                },
+
+                submitHandler: function (form) { },
+                invalidHandler: function (form) { },
+            });
+
+            $("#modal-wizard-container").ace_wizard();
+            $("#modal-wizard .wizard-actions .btn[data-dismiss=modal]").removeAttr(
+                "disabled"
+            );
+
+            /**
+            $('#date').datepicker({autoclose:true}).on('changeDate', function(ev) {
+              $(this).closest('form').validate().element($(this));
+            });
+
+            $('#mychosen').chosen().on('change', function(ev) {
+              $(this).closest('form').validate().element($(this));
+            });
+            */
+
+            $(document).one("ajaxloadstart.page", function (e) {
+                //in ajax mode, remove remaining elements before leaving page
+                $("[class*=select2]").remove();
+            });
+        });
+    </script>
+</header>
+

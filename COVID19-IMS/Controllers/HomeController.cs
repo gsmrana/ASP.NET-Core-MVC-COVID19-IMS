@@ -23,7 +23,22 @@ namespace COVID19IMS.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Admin()
+        {
+            return View();
+        }
+
+        public IActionResult Appointment()
+        {
+            return View();
+        }
+
+        public IActionResult Statistics()
         {
             return View();
         }
