@@ -79,6 +79,16 @@
     //  POPUP VIDEO
     $('.popup-video').magnificPopup({
 		type: 'iframe',
+		iframe: {
+        patterns: {
+            youtube: {
+	              index: 'youtube.com/', 
+	              id: 'v=', 
+	              src: '//www.youtube.com/embed/%id%?autoplay=1' 
+		        }
+		     },
+		     srcAction: 'iframe_src', 
+		}
 	});
 	
 	//  Accordion

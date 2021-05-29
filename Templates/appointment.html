@@ -1,1148 +1,998 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <title>Appointment Registration - COVID19 IMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="keywords"
-      content="Covid 19 - Social Awareness and Information Management System (IMS), Coronavirus (COVID-19) Pandemic, Corona virus responsive"
-    />
-    <meta
-      name="description"
-      content="Covid 19 - Social Awareness and Information Management System (IMS)"
-    />
+    <meta name="keywords" content="Covid 19 - Social Awareness and Information Management System (IMS), Coronavirus (COVID-19) Pandemic, Corona virus responsive" />
+    <meta name="description" content="Covid 19 - Social Awareness and Information Management System (IMS)" />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&amp;display=swap" />
+    <link rel="stylesheet" href="assets-ace/fonts/fonts.googleapis.com.css" />
+
     <!-- Site All Style Sheet Css -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-    <link href="assets/css/odometer.min.css" rel="stylesheet" />
-    <!-- Site Main Style Sheet Css -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- Site Main Responsive Style Sheet Css -->
-    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/odometer.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
 
+    <!-- Site Main Style Sheet Css -->
     <link href="assets-ace/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets-ace/fonts/fonts.googleapis.com.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="assets-ace/css/ace.min.css" />
+    <link rel="stylesheet" href="assets-ace/css/ace-rtl.min.css" />
     <link rel="stylesheet" href="assets-ace/css/select2.min.css" />
-
-    <!-- Site Main Style Sheet Css -->
-    <link href="assets-ace/css/ace.min.css" rel="stylesheet" />
-    <link href="assets-ace/css/ace-rtl.min.css" rel="stylesheet" />
     <script src="assets-ace/js/ace-extra.min.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Start Preloader Area -->
     <div class="preloader">
-      <div class="preloader">
-        <span></span>
-        <span></span>
-      </div>
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
     </div>
     <!-- End Preloader Area -->
-
     <!-- Navbar Start -->
-    <nav
-      class="navbar navbar-b navbar-reduce navbar-expand-md fixed-top"
-      style="background-color: white"
-      id="mainNav"
-    >
-      <div class="container">
-        <a class="navbar-brand js-scroll" href="index.html">
-          <img src="assets/img/logo.png" class="img-fluid" alt="logo" />
-        </a>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarDefault"
-          aria-controls="navbarDefault"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div
-          class="navbar-collapse justify-content-end"
-          id="navbarDefault"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link js-scroll active" href="#home">Home</a>
-            </li>
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link js-scroll" href="#symptoms">Symptoms</a>
-            </li>
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link js-scroll" href="#faq">Faq</a>
-            </li>
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link js-scroll" href="#prevention">Prevention</a>
-            </li>
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link js-scroll" href="#contact">Test</a>
-            </li>
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link js-scroll" href="#vaccine">Vaccine</a>
-            </li>
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link js-scroll" href="statistics.html">
-                Statistics
-                </a>
-            </li>
-          </ul>
-          <ul class="navbar-nav-tracker-btn">
-            <li class="nav-item" style="border: none;">
-              <a class="nav-link live-tracker-btn js-scroll" href="index.html">
-                Logout
-              </a>
-            </li>
-          </ul>
+    <nav class="navbar navbar-b navbar-reduce navbar-expand-md fixed-top"
+         style="background-color: white"
+         id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll" href="index.html">
+                <img src="assets/img/logo.png" class="img-fluid" alt="logo" />
+            </a>
+            <button class="navbar-toggler collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarDefault"
+                    aria-controls="navbarDefault"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-collapse justify-content-end"
+                 id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link js-scroll active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link js-scroll" href="#symptoms">Symptoms</a>
+                    </li>
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link js-scroll" href="#faq">Faq</a>
+                    </li>
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link js-scroll" href="#prevention">Prevention</a>
+                    </li>
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link js-scroll" href="#contact">Test</a>
+                    </li>
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link js-scroll" href="#vaccine">Vaccine</a>
+                    </li>
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link js-scroll" href="statistics.html">
+                            Statistics
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav-tracker-btn">
+                    <li class="nav-item" style="border: none;">
+                        <a class="nav-link live-tracker-btn js-scroll" href="index.html">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
     <!-- Navbar End -->
-
     <!-- Registration Section Start -->
-    <header
-      id="home"
-      class="hero-equal-height overflow-hidden d-flex align-items-center"
-    >
-      <div class="container">
+    <header id="home" class="hero-equal-height overflow-hidden d-flex align-items-center">
+        <div class="container">
             <div class="main-content">
-              <div class="main-content-inner">
-                <div class="page-content">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <!-- PAGE CONTENT BEGINS -->
-      
-                      <div class="widget-box">
-                        <div
-                          class="widget-header widget-header-blue widget-header-flat"
-                        >
-                          <h4 class="widget-title">
-                            New COVID-19 Appointment Registration
-                          </h4>
-      
-                          <div class="widget-toolbar">
-                            <label>
-                              <small class="green">
-                                <b>Validation</b>
-                              </small>
-      
-                              <input
-                                id="skip-validation"
-                                type="checkbox"
-                                checked = "true"
-                                class="ace ace-switch ace-switch-4"
-                              />
-                              <span class="lbl middle"></span>
-                            </label>
-                          </div>
-                        </div>
-      
-                        <div class="widget-body">
-                          <div class="widget-main">
-                            <div id="fuelux-wizard-container">
-                              <div>
-                                <ul class="steps">
-                                  <li data-step="1" class="active">
-                                    <span class="step">1</span>
-                                    <span class="title">User Information</span>
-                                  </li>
-      
-                                  <li data-step="2">
-                                    <span class="step">2</span>
-                                    <span class="title">Verification (OTP)</span>
-                                  </li>
-      
-                                  <li data-step="3">
-                                    <span class="step">3</span>
-                                    <span class="title">Payment</span>
-                                  </li>
-      
-                                  <li data-step="4">
-                                    <span class="step">4</span>
-                                    <span class="title">Confirmation</span>
-                                  </li>
-                                </ul>
-                              </div>
-      
-                              <hr />
-      
-                              <div class="step-content pos-rel">
-                                <div class="step-pane active" data-step="1">
-                                  <h3 class="lighter block green">
-                                    Enter the following information
-                                  </h3>
-      
-                                  <form
-                                    class="form-horizontal"
-                                    id="validation-form"
-                                    method="get"
-                                  >
-                                    
-                                  <div class="form-group">
-                                    <label
-                                      class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                      for="name"
-                                      >Full Name:</label
-                                    >
-      
-                                    <div class="col-xs-12 col-sm-9">
-                                      <div class="clearfix">
-                                        <input
-                                          type="text"
-                                          id="name"
-                                          name="name"
-                                          class="col-xs-12 col-sm-5"
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-                                  
-                                  <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="email"
-                                        >Email Address:</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="clearfix">
-                                          <input
-                                            type="email"
-                                            name="email"
-                                            id="email"
-                                            class="col-xs-12 col-sm-5"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="nid"
-                                        >NID Number:</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="clearfix">
-                                          <input
-                                            type="number"
-                                            id="nid"
-                                            name="nid"
-                                            class="col-xs-12 col-sm-5"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="space-2"></div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="phone"
-                                        >Phone Number:</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="input-group">
-                                          <span class="input-group-addon">
-                                            <i class="ace-icon fa fa-phone"></i>
-                                          </span>
-      
-                                          <input type="number" id="phone" name="phone" />
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="space-2"></div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="address"
-                                        >Home Address:</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="clearfix">
-                                          <input
-                                            type="text"
-                                            id="address"
-                                            name="address"
-                                            class="col-xs-12 col-sm-8"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="hr hr-dotted"></div>    
-                                    
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="age"
-                                        >Age:</label
-                                      >
-        
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="clearfix">
-                                          <input
-                                            type="number"
-                                            id="age"
-                                            name="age"
-                                            class="col-xs-12 col-sm-1"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        >Gender</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div>
-                                          <label class="line-height-1 blue">
-                                            <input
-                                              name="gender"
-                                              value="1"
-                                              type="radio"
-                                              class="ace"
-                                            />
-                                            <span class="lbl"> Male</span>
-                                          </label>
-                                        </div>
-      
-                                        <div>
-                                          <label class="line-height-1 blue">
-                                            <input
-                                              name="gender"
-                                              value="2"
-                                              type="radio"
-                                              class="ace"
-                                            />
-                                            <span class="lbl"> Female</span>
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="space-2"></div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        >Send me</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div>
-                                          <label>
-                                            <input
-                                              name="subscription"
-                                              value="1"
-                                              type="checkbox"
-                                              class="ace"
-                                            />
-                                            <span class="lbl">
-                                              Email Report / Certificate</span
-                                            >
-                                          </label>
-                                        </div>
-      
-                                        <div>
-                                          <label>
-                                            <input
-                                              name="subscription"
-                                              value="2"
-                                              type="checkbox"
-                                              class="ace"
-                                            />
-                                            <span class="lbl">
-                                              Parcel Report / Certificate</span
-                                            >
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="hr hr-dotted"></div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="state"
-                                        >Select Branch</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <select
-                                          id="state"
-                                          name="state"
-                                          class="select2"
-                                          data-placeholder="Click to Choose..."
-                                        >
-                                          <option value="">&nbsp;</option>
-                                          <option value="BA">Badda</option>
-                                          <option value="BN">Banani</option>
-                                          <option value="DM">Dhanmondi</option>
-                                          <option value="GL">Gulshan</option>
-                                          <option value="MP">Mirpur</option>
-                                          <option value="MK">Mohakhali</option>
-                                          <option value="UT">Uttara</option>
-                                        </select>
-                                      </div>
-                                    </div>
-      
-                                    <div class="space-2"></div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="platform"
-                                        >Appointment Date</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="clearfix">
-                                          <select
-                                            class="input-medium"
-                                            id="apdate"
-                                            name="apdate"
-                                          >
-                                            <option value="">
-                                              ------/------/------
-                                            </option>
-                                            <option value="dt1">04/05/2021</option>
-                                            <option value="dt2">05/05/2021</option>
-                                            <option value="dt3">06/05/2021</option>
-                                            <option value="dt4">07/05/2021</option>
-                                            <option value="dt5">08/05/2021</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="space-2"></div>
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="comment"
-                                        >Comment</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="clearfix">
-                                          <textarea
-                                            class="input-xlarge"
-                                            name="comment"
-                                            id="comment"
-                                          ></textarea>
-                                        </div>
-                                      </div>
-                                    </div>
-      
-                                    <div class="space-8"></div>
-      
-                                    <div class="form-group">
-                                      <div class="col-xs-12 col-sm-4 col-sm-offset-3">
-                                        <label>
-                                          <input
-                                            name="agree"
-                                            id="agree"
-                                            type="checkbox"
-                                            class="ace"
-                                          />
-                                          <span class="lbl">
-                                            I accept the policy</span
-                                          >
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </form>
+                <div class="main-content-inner">
+                    <div class="page-content">
+                        <div class="widget-box">
+                            <div class="widget-header widget-header-blue widget-header-flat">
+                                <h4 class="widget-title">
+                                    New COVID-19 Appointment Registration
+                                </h4>
+
+                                <div class="widget-toolbar">
+                                    <label>
+                                        <small class="green">
+                                            <b>Validation</b>
+                                        </small>
+
+                                        <input id="skip-validation"
+                                               type="checkbox"
+                                               checked="true"
+                                               class="ace ace-switch ace-switch-4" />
+                                        <span class="lbl middle"></span>
+                                    </label>
                                 </div>
-      
-                                <div class="step-pane" data-step="2">
-                                  <div>
-                                    <div class="alert alert-info">
-                                      <button
-                                        type="button"
-                                        class="close"
-                                        data-dismiss="alert"
-                                      >
-                                        <i class="ace-icon fa fa-times"></i>
-                                      </button>
-                                      <strong>
-                                        <i class="ace-icon fa fa-info"></i>
-                                      </strong>
-                                      . A verification SMS has been sent to your
-                                      mobile containing and OTP, Please enter the OTP
-                                      below.
-                                      <br />
-                                    </div>
-                                  </div>
-      
-                                  <div style="margin-top: 20px">
-                                    <form
-                                      class="form-horizontal"
-                                      id="verification-form"
-                                      method="get"
-                                    >
-      
-                                    <div class="form-group">
-                                      <label
-                                        class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                        for="otp"
-                                        >Enter OTP:</label
-                                      >
-      
-                                      <div class="col-xs-12 col-sm-9">
-                                        <div class="clearfix">
-                                          <input
-                                            type="number"
-                                            id="otp"
-                                            name="otp"
-                                            class="col-xs-12 col-sm-2"
-                                          />
-                                        </div>
-                                      </div>                    
-                                    </div>
-                                  </form>
-                                </div>
-                                  
-                                </div>
-      
-                                <div class="step-pane" data-step="3">
-      
-                                  <div>
-                                    <div class="alert alert-info">
-                                      <button
-                                        type="button"
-                                        class="close"
-                                        data-dismiss="alert"
-                                      >
-                                        <i class="ace-icon fa fa-times"></i>
-                                      </button>
-                                      <strong>
-                                        <i class="ace-icon fa fa-info"></i>
-                                      </strong>
-                                      . Please complete the payment through bKash.
-                                      <br />
-                                    </div>
-                                  </div>
-      
-                                  <div>
-                                    <h3 class="blue lighter">
-                                      <strong> bKash Merchant number: 01712345678</strong>
-                                    </h3>
-      
-                                    <div style="margin-top: 20px">
-                                      <form
-                                        class="form-horizontal"
-                                        id="payment-form"
-                                        method="get"
-                                      >
-        
-                                      <div class="form-group">
-                                        <label
-                                          class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                          for="amount"
-                                          >Amount (BDT):</label
-                                        >
-        
-                                        <div class="col-xs-12 col-sm-9">
-                                          <div class="clearfix">
-                                            <input
-                                              type="number"
-                                              id="amount"
-                                              name="amount"
-                                              value="2500"
-                                              class="col-xs-12 col-sm-2"
-                                            />
-                                          </div>
-                                        </div>                    
-                                      </div>
-      
-                                      <div class="form-group">
-                                        <label
-                                          class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                          for="bkashtrans"
-                                          >bKash Transaction Id:</label
-                                        >
-        
-                                        <div class="col-xs-12 col-sm-9">
-                                          <div class="clearfix">
-                                            <input
-                                              type="text"
-                                              id="bkashtrans"
-                                              name="bkashtrans"
-                                              class="col-xs-12 col-sm-2"
-                                            />
-                                          </div>
-                                        </div>                    
-                                      </div>
-      
-                                      <div class="form-group">
-                                        <label
-                                          class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                          for="countercode"
-                                          >bKash Counter Code:</label
-                                        >
-        
-                                        <div class="col-xs-12 col-sm-9">
-                                          <div class="clearfix">
-                                            <input
-                                              type="number"
-                                              id="countercode"
-                                              name="countercode"
-                                              class="col-xs-12 col-sm-2"
-                                            />
-                                          </div>
-                                        </div>                    
-                                      </div>
-      
-                                    </form>
-                                  </div>
-      
-                                  </div>
-                                </div>
-      
-                                <div class="step-pane" data-step="4">
-                                  <div class="center">
-                                    <h1 class="green">Confirmation!</h1>
-                                    <h3>
-                                      Your appointment has been registered successfully.
-                                    </h3>
-                                    <h3>
-                                      Appointment details has been sent to you email.
-                                    </h3>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-      
-                            <hr />
-                            <div class="wizard-actions">
-                              <button class="btn btn-prev">
-                                <i class="ace-icon fa fa-arrow-left"></i>
-                                Prev
-                              </button>
-      
-                              <button
-                                class="btn btn-success btn-next"
-                                data-last="Finish"
-                              >
-                                Next
-                                <i
-                                  class="ace-icon fa fa-arrow-right icon-on-right"
-                                ></i>
-                              </button>
+
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <div id="fuelux-wizard-container">
+                                        <div>
+                                            <ul class="steps">
+                                                <li data-step="1" class="active">
+                                                    <span class="step">1</span>
+                                                    <span class="title">User Information</span>
+                                                </li>
+
+                                                <li data-step="2">
+                                                    <span class="step">2</span>
+                                                    <span class="title">Verification (OTP)</span>
+                                                </li>
+
+                                                <li data-step="3">
+                                                    <span class="step">3</span>
+                                                    <span class="title">Payment</span>
+                                                </li>
+
+                                                <li data-step="4">
+                                                    <span class="step">4</span>
+                                                    <span class="title">Confirmation</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <hr />
+
+                                        <div class="step-content pos-rel">
+                                            <div class="step-pane active" data-step="1">
+                                                <h3 class="lighter block green">
+                                                    Enter the following information
+                                                </h3>
+
+                                                <form class="form-horizontal"
+                                                      id="validation-form"
+                                                      method="get">
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="name">Full Name:</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <input type="text"
+                                                                       id="name"
+                                                                       name="name"
+                                                                       class="col-xs-12 col-sm-5" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="email">Email Address:</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <input type="email"
+                                                                       name="email"
+                                                                       id="email"
+                                                                       class="col-xs-12 col-sm-5" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="nid">NID Number:</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <input type="number"
+                                                                       id="nid"
+                                                                       name="nid"
+                                                                       class="col-xs-12 col-sm-5" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-2"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="phone">Phone Number:</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                                    <i class="ace-icon fa fa-phone"></i>
+                                                                </span>
+
+                                                                <input type="number" id="phone" name="phone" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-2"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="address">Home Address:</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <input type="text"
+                                                                       id="address"
+                                                                       name="address"
+                                                                       class="col-xs-12 col-sm-8" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="hr hr-dotted"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="age">Age:</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <input type="number"
+                                                                       id="age"
+                                                                       name="age"
+                                                                       class="col-xs-12 col-sm-1" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right">Gender</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div>
+                                                                <label class="line-height-1 blue">
+                                                                    <input name="gender"
+                                                                           value="1"
+                                                                           type="radio"
+                                                                           class="ace" />
+                                                                    <span class="lbl"> Male</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div>
+                                                                <label class="line-height-1 blue">
+                                                                    <input name="gender"
+                                                                           value="2"
+                                                                           type="radio"
+                                                                           class="ace" />
+                                                                    <span class="lbl"> Female</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-2"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right">Send me</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div>
+                                                                <label>
+                                                                    <input name="subscription"
+                                                                           value="1"
+                                                                           type="checkbox"
+                                                                           class="ace" />
+                                                                    <span class="lbl">
+                                                                        Email Report / Certificate
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div>
+                                                                <label>
+                                                                    <input name="subscription"
+                                                                           value="2"
+                                                                           type="checkbox"
+                                                                           class="ace" />
+                                                                    <span class="lbl">
+                                                                        Parcel Report / Certificate
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="hr hr-dotted"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="state">Select Branch</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <select id="state"
+                                                                    name="state"
+                                                                    class="select2"
+                                                                    data-placeholder="Click to Choose...">
+                                                                <option value="">&nbsp;</option>
+                                                                <option value="BA">Badda</option>
+                                                                <option value="BN">Banani</option>
+                                                                <option value="DM">Dhanmondi</option>
+                                                                <option value="GL">Gulshan</option>
+                                                                <option value="MP">Mirpur</option>
+                                                                <option value="MK">Mohakhali</option>
+                                                                <option value="UT">Uttara</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-2"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="platform">Appointment Date</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <select class="input-medium"
+                                                                        id="apdate"
+                                                                        name="apdate">
+                                                                    <option value="">
+                                                                        ------/------/------
+                                                                    </option>
+                                                                    <option value="dt1">04/05/2021</option>
+                                                                    <option value="dt2">05/05/2021</option>
+                                                                    <option value="dt3">06/05/2021</option>
+                                                                    <option value="dt4">07/05/2021</option>
+                                                                    <option value="dt5">08/05/2021</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-2"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                               for="comment">Comment</label>
+
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <div class="clearfix">
+                                                                <textarea class="input-xlarge"
+                                                                          name="comment"
+                                                                          id="comment"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-8"></div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-xs-12 col-sm-4 col-sm-offset-3">
+                                                            <label>
+                                                                <input name="agree"
+                                                                       id="agree"
+                                                                       type="checkbox"
+                                                                       class="ace" />
+                                                                <span class="lbl">
+                                                                    I accept the policy
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="step-pane" data-step="2">
+                                                <div>
+                                                    <div class="alert alert-info">
+                                                        <button type="button"
+                                                                class="close"
+                                                                data-dismiss="alert">
+                                                            <i class="ace-icon fa fa-times"></i>
+                                                        </button>
+                                                        <strong>
+                                                            <i class="ace-icon fa fa-info"></i>
+                                                        </strong>
+                                                        . A verification SMS has been sent to your
+                                                        mobile containing and OTP, Please enter the OTP
+                                                        below.
+                                                        <br />
+                                                    </div>
+                                                </div>
+
+                                                <div style="margin-top: 20px">
+                                                    <form class="form-horizontal"
+                                                          id="verification-form"
+                                                          method="get">
+
+                                                        <div class="form-group">
+                                                            <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                                   for="otp">Enter OTP:</label>
+
+                                                            <div class="col-xs-12 col-sm-9">
+                                                                <div class="clearfix">
+                                                                    <input type="number"
+                                                                           id="otp"
+                                                                           name="otp"
+                                                                           class="col-xs-12 col-sm-2" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="step-pane" data-step="3">
+
+                                                <div>
+                                                    <div class="alert alert-info">
+                                                        <button type="button"
+                                                                class="close"
+                                                                data-dismiss="alert">
+                                                            <i class="ace-icon fa fa-times"></i>
+                                                        </button>
+                                                        <strong>
+                                                            <i class="ace-icon fa fa-info"></i>
+                                                        </strong>
+                                                        . Please complete the payment through bKash.
+                                                        <br />
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h3 class="blue lighter">
+                                                        <strong> bKash Merchant number: 01712345678</strong>
+                                                    </h3>
+
+                                                    <div style="margin-top: 20px">
+                                                        <form class="form-horizontal"
+                                                              id="payment-form"
+                                                              method="get">
+
+                                                            <div class="form-group">
+                                                                <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                                       for="amount">Amount (BDT):</label>
+
+                                                                <div class="col-xs-12 col-sm-9">
+                                                                    <div class="clearfix">
+                                                                        <input type="number"
+                                                                               id="amount"
+                                                                               name="amount"
+                                                                               value="2500"
+                                                                               class="col-xs-12 col-sm-2" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                                       for="bkashtrans">bKash Transaction Id:</label>
+
+                                                                <div class="col-xs-12 col-sm-9">
+                                                                    <div class="clearfix">
+                                                                        <input type="text"
+                                                                               id="bkashtrans"
+                                                                               name="bkashtrans"
+                                                                               class="col-xs-12 col-sm-2" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="control-label col-xs-12 col-sm-3 no-padding-right"
+                                                                       for="countercode">bKash Counter Code:</label>
+
+                                                                <div class="col-xs-12 col-sm-9">
+                                                                    <div class="clearfix">
+                                                                        <input type="number"
+                                                                               id="countercode"
+                                                                               name="countercode"
+                                                                               class="col-xs-12 col-sm-2" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="step-pane" data-step="4">
+                                                <div class="center">
+                                                    <h1 class="green">Confirmation!</h1>
+                                                    <h3>
+                                                        Your appointment has been registered successfully.
+                                                    </h3>
+                                                    <h3>
+                                                        Appointment details has been sent to you email.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr />
+                                    <div class="wizard-actions">
+                                        <button class="btn btn-prev">
+                                            <i class="ace-icon fa fa-arrow-left"></i>
+                                            Prev
+                                        </button>
+
+                                        <button class="btn btn-success btn-next"
+                                                data-last="Finish">
+                                            Next
+                                            <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.widget-main -->
                             </div>
-                          </div>
-                          <!-- /.widget-main -->
+                            <!-- /.widget-body -->
                         </div>
-                        <!-- /.widget-body -->
-                      </div>
-                      </div>
-                      <!-- PAGE CONTENT ENDS -->
                     </div>
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.row -->
                 </div>
-                <!-- /.page-content -->
-              </div>
-            
-            <!-- /.main-content -->
-      
-            <a
-              href="#"
-              id="btn-scroll-up"
-              class="btn-scroll-up btn btn-sm btn-inverse"
-            >
-              <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-            </a>
-          </div>
-          <!-- /.main-container -->
-      
-          <!-- basic scripts -->
-      
-          <!--[if !IE]> -->
-          <script src="assets-ace/js/jquery.2.1.1.min.js"></script>
-      
-          <!-- <![endif]-->
-      
-          <!--[if IE]>
-            <script src="assets/js/jquery.1.11.1.min.js"></script>
-          <![endif]-->
-      
-          <!--[if !IE]> -->
+            </div>
+        </div>
+
+        <a href="#"
+           id="btn-scroll-up"
+           class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+
+        <!-- basic scripts -->
+        <!--[if !IE]> -->
+        <script src="assets-ace/js/jquery.2.1.1.min.js"></script>
+
+        <!-- <![endif]-->
+        <!--[if IE]>
+          <script src="assets/js/jquery.1.11.1.min.js"></script>
+        <![endif]-->
+        <!--[if !IE]> -->
+        <script type="text/javascript">
+            window.jQuery ||
+                document.write(
+                    "<script src='assets-ace/js/jquery.min.js'>" + "<" + "/script>"
+                );
+        </script>
+
+        <!-- <![endif]-->
+        <!--[if IE]>
           <script type="text/javascript">
             window.jQuery ||
               document.write(
-                "<script src='assets-ace/js/jquery.min.js'>" + "<" + "/script>"
+                "<script src='assets/js/jquery1x.min.js'>" + "<" + "/script>"
               );
           </script>
-      
-          <!-- <![endif]-->
-      
-          <!--[if IE]>
-            <script type="text/javascript">
-              window.jQuery ||
-                document.write(
-                  "<script src='assets/js/jquery1x.min.js'>" + "<" + "/script>"
-                );
-            </script>
-          <![endif]-->
-          <script type="text/javascript">
+        <![endif]-->
+        <script type="text/javascript">
             if ("ontouchstart" in document.documentElement)
-              document.write(
-                "<script src='assets-ace/js/jquery.mobile.custom.min.js'>" +
-                  "<" +
-                  "/script>"
-              );
-          </script>
-          <script src="assets-ace/js/bootstrap.min.js"></script>
-      
-          <!-- page specific plugin scripts -->
-          <script src="assets-ace/js/fuelux.wizard.min.js"></script>
-          <script src="assets-ace/js/jquery.validate.min.js"></script>
-          <script src="assets-ace/js/additional-methods.min.js"></script>
-          <script src="assets-ace/js/bootbox.min.js"></script>
-          <script src="assets-ace/js/jquery.maskedinput.min.js"></script>
-          <script src="assets-ace/js/select2.min.js"></script>
-      
-          <!-- ace scripts -->
-          <script src="assets-ace/js/ace-elements.min.js"></script>
-          <script src="assets-ace/js/ace.min.js"></script>
-      
-          <!-- inline scripts related to this page -->
-          <script type="text/javascript">
+                document.write(
+                    "<script src='assets-ace/js/jquery.mobile.custom.min.js'>" +
+                    "<" +
+                    "/script>"
+                );
+        </script>
+        <script src="assets-ace/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+        <script src="assets-ace/js/fuelux.wizard.min.js"></script>
+        <script src="assets-ace/js/jquery.validate.min.js"></script>
+        <script src="assets-ace/js/additional-methods.min.js"></script>
+        <script src="assets-ace/js/bootbox.min.js"></script>
+        <script src="assets-ace/js/jquery.maskedinput.min.js"></script>
+        <script src="assets-ace/js/select2.min.js"></script>
+
+        <!-- ace scripts -->
+        <script src="assets-ace/js/ace-elements.min.js"></script>
+        <script src="assets-ace/js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
+        <script type="text/javascript">
             jQuery(function ($) {
-              $("[data-rel=tooltip]").tooltip();
-      
-              $(".select2")
-                .css("width", "200px")
-                .select2({ allowClear: true })
-                .on("change", function () {
-                  $(this).closest("form").validate().element($(this));
+                $("[data-rel=tooltip]").tooltip();
+
+                $(".select2")
+                    .css("width", "200px")
+                    .select2({ allowClear: true })
+                    .on("change", function () {
+                        $(this).closest("form").validate().element($(this));
+                    });
+
+                var $validation = true;
+                $("#fuelux-wizard-container")
+                    .ace_wizard({
+                        //step: 2 //optional argument. wizard will jump to step "2" at first
+                        //buttons: '.wizard-actions:eq(0)'
+                    })
+                    .on("actionclicked.fu.wizard", function (e, info) {
+                        if (info.step == 1 && $validation) {
+                            if (!$("#validation-form").valid()) e.preventDefault();
+                        }
+                        if (info.step == 2 && $validation) {
+                            if (!$("#verification-form").valid()) e.preventDefault();
+                        }
+                        if (info.step == 3 && $validation) {
+                            if (!$("#payment-form").valid()) e.preventDefault();
+                        }
+                    })
+                    .on("finished.fu.wizard", function (e) {
+                        location.href = 'index.html';
+                    })
+                    .on("stepclick.fu.wizard", function (e) {
+                        //e.preventDefault();//this will prevent clicking and selecting steps
+                    });
+
+                //jump to a step
+                /**
+                var wizard = $('#fuelux-wizard-container').data('fu.wizard')
+                wizard.currentStep = 3;
+                wizard.setState();
+                */
+
+                //determine selected step
+                //wizard.selectedItem().step
+
+                //enable disable the validation
+                $("#skip-validation")
+                    .on("click", function () {
+                        $validation = this.checked;
+                    });
+
+                //documentation : http://docs.jquery.com/Plugins/Validation/validate
+
+                $("#validation-form").validate({
+                    errorElement: "div",
+                    errorClass: "help-block",
+                    focusInvalid: true,
+                    ignore: "",
+                    rules: {
+                        email: {
+                            required: true,
+                            email: true,
+                        },
+                        password: {
+                            required: true,
+                            minlength: 5,
+                        },
+                        password2: {
+                            required: true,
+                            minlength: 5,
+                            equalTo: "#password",
+                        },
+                        name: {
+                            required: true,
+                        },
+                        nid: {
+                            required: true,
+                            minlength: 13
+                        },
+                        phone: {
+                            required: true,
+                            minlength: 11
+                        },
+                        url: {
+                            required: true,
+                            url: true,
+                        },
+                        comment: {
+                            required: false,
+                        },
+                        state: {
+                            required: true,
+                        },
+                        platform: {
+                            required: true,
+                        },
+                        subscription: {
+                            required: true,
+                        },
+                        age: {
+                            required: true,
+                        },
+                        gender: {
+                            required: true,
+                        },
+                        apdate: {
+                            required: true,
+                        },
+                        agree: {
+                            required: true,
+                        },
+                    },
+
+                    messages: {
+                        email: {
+                            required: "Please provide a valid email.",
+                            email: "Please provide a valid email.",
+                        },
+                        password: {
+                            required: "Please specify a password.",
+                            minlength: "Please specify a secure password.",
+                        },
+                        state: "Please choose branch",
+                        subscription: "Please choose at least one option",
+                        gender: "Please choose gender",
+                        agree: "Please accept our policy",
+                    },
+
+                    highlight: function (e) {
+                        $(e)
+                            .closest(".form-group")
+                            .removeClass("has-info")
+                            .addClass("has-error");
+                    },
+
+                    success: function (e) {
+                        $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
+                        $(e).remove();
+                    },
+
+                    errorPlacement: function (error, element) {
+                        if (
+                            element.is("input[type=checkbox]") ||
+                            element.is("input[type=radio]")
+                        ) {
+                            var controls = element.closest('div[class*="col-"]');
+                            if (controls.find(":checkbox,:radio").length > 1)
+                                controls.append(error);
+                            else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
+                        } else if (element.is(".select2")) {
+                            error.insertAfter(
+                                element.siblings('[class*="select2-container"]:eq(0)')
+                            );
+                        } else if (element.is(".chosen-select")) {
+                            error.insertAfter(
+                                element.siblings('[class*="chosen-container"]:eq(0)')
+                            );
+                        } else error.insertAfter(element.parent());
+                    },
+
+                    submitHandler: function (form) { },
+                    invalidHandler: function (form) { },
                 });
-      
-              var $validation = true;
-              $("#fuelux-wizard-container")
-                .ace_wizard({
-                  //step: 2 //optional argument. wizard will jump to step "2" at first
-                  //buttons: '.wizard-actions:eq(0)'
-                })
-                .on("actionclicked.fu.wizard", function (e, info) {
-                  if (info.step == 1 && $validation) {
-                    if (!$("#validation-form").valid()) e.preventDefault();
-                  }
-                  if (info.step == 2 && $validation) {
-                    if (!$("#verification-form").valid()) e.preventDefault();
-                  }
-                  if (info.step == 3 && $validation) {
-                    if (!$("#payment-form").valid()) e.preventDefault();
-                  }
-                })
-                .on("finished.fu.wizard", function (e) {
-                  location.href = 'index.html';
-                })
-                .on("stepclick.fu.wizard", function (e) {
-                  //e.preventDefault();//this will prevent clicking and selecting steps
+
+                $("#verification-form").validate({
+                    errorElement: "div",
+                    errorClass: "help-block",
+                    focusInvalid: true,
+                    ignore: "",
+                    rules: {
+                        otp: {
+                            required: true,
+                            minlength: 5,
+                        },
+                    },
+
+                    messages: {
+                        otp: {
+                            required: "Please enter 5 digit OTP send to your mobile.",
+                        },
+                    },
+
+                    highlight: function (e) {
+                        $(e)
+                            .closest(".form-group")
+                            .removeClass("has-info")
+                            .addClass("has-error");
+                    },
+
+                    success: function (e) {
+                        $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
+                        $(e).remove();
+                    },
+
+                    errorPlacement: function (error, element) {
+                        if (
+                            element.is("input[type=checkbox]") ||
+                            element.is("input[type=radio]")
+                        ) {
+                            var controls = element.closest('div[class*="col-"]');
+                            if (controls.find(":checkbox,:radio").length > 1)
+                                controls.append(error);
+                            else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
+                        } else if (element.is(".select2")) {
+                            error.insertAfter(
+                                element.siblings('[class*="select2-container"]:eq(0)')
+                            );
+                        } else if (element.is(".chosen-select")) {
+                            error.insertAfter(
+                                element.siblings('[class*="chosen-container"]:eq(0)')
+                            );
+                        } else error.insertAfter(element.parent());
+                    },
+
+                    submitHandler: function (form) { },
+                    invalidHandler: function (form) { },
                 });
-      
-              //jump to a step
-              /**
-              var wizard = $('#fuelux-wizard-container').data('fu.wizard')
-              wizard.currentStep = 3;
-              wizard.setState();
-              */
-      
-              //determine selected step
-              //wizard.selectedItem().step
-      
-              //enable disable the validation
-              $("#skip-validation")
-                .on("click", function () {
-                  $validation = this.checked;
+
+                $("#payment-form").validate({
+                    errorElement: "div",
+                    errorClass: "help-block",
+                    focusInvalid: true,
+                    ignore: "",
+                    rules: {
+                        amount: {
+                            required: true,
+                        },
+                        bkashtrans: {
+                            required: true,
+                            minlength: 8
+                        },
+                        countercode: {
+                            required: true,
+                            minlength: 1
+                        },
+                    },
+
+                    messages: {
+                        amount: {
+                            required: "Please enter valid payment amount.",
+                        },
+                        bkashtrans: {
+                            required: "Please enter bKash 8 digit Transaction Id send to your mobile.",
+                        },
+                        countercode: {
+                            required: "Please enter bKash 1 digit Counter Code send to your mobile.",
+                        },
+                    },
+
+                    highlight: function (e) {
+                        $(e)
+                            .closest(".form-group")
+                            .removeClass("has-info")
+                            .addClass("has-error");
+                    },
+
+                    success: function (e) {
+                        $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
+                        $(e).remove();
+                    },
+
+                    errorPlacement: function (error, element) {
+                        if (
+                            element.is("input[type=checkbox]") ||
+                            element.is("input[type=radio]")
+                        ) {
+                            var controls = element.closest('div[class*="col-"]');
+                            if (controls.find(":checkbox,:radio").length > 1)
+                                controls.append(error);
+                            else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
+                        } else if (element.is(".select2")) {
+                            error.insertAfter(
+                                element.siblings('[class*="select2-container"]:eq(0)')
+                            );
+                        } else if (element.is(".chosen-select")) {
+                            error.insertAfter(
+                                element.siblings('[class*="chosen-container"]:eq(0)')
+                            );
+                        } else error.insertAfter(element.parent());
+                    },
+
+                    submitHandler: function (form) { },
+                    invalidHandler: function (form) { },
                 });
-      
-              //documentation : http://docs.jquery.com/Plugins/Validation/validate
-      
-              $("#validation-form").validate({
-                errorElement: "div",
-                errorClass: "help-block",
-                focusInvalid: true,
-                ignore: "",
-                rules: {
-                  email: {
-                    required: true,
-                    email: true,
-                  },
-                  password: {
-                    required: true,
-                    minlength: 5,
-                  },
-                  password2: {
-                    required: true,
-                    minlength: 5,
-                    equalTo: "#password",
-                  },
-                  name: {
-                    required: true,
-                  },
-                  nid: {
-                    required: true,
-                    minlength: 13
-                  },
-                  phone: {
-                    required: true,
-                    minlength: 11
-                  },
-                  url: {
-                    required: true,
-                    url: true,
-                  },
-                  comment: {
-                    required: false,
-                  },
-                  state: {
-                    required: true,
-                  },
-                  platform: {
-                    required: true,
-                  },
-                  subscription: {
-                    required: true,
-                  },
-                  age: {
-                    required: true,
-                  },
-                  gender: {
-                    required: true,
-                  },
-                  apdate: {
-                    required: true,
-                  },
-                  agree: {
-                    required: true,
-                  },
-                },
-      
-                messages: {
-                  email: {
-                    required: "Please provide a valid email.",
-                    email: "Please provide a valid email.",
-                  },
-                  password: {
-                    required: "Please specify a password.",
-                    minlength: "Please specify a secure password.",
-                  },
-                  state: "Please choose branch",
-                  subscription: "Please choose at least one option",
-                  gender: "Please choose gender",
-                  agree: "Please accept our policy",
-                },
-      
-                highlight: function (e) {
-                  $(e)
-                    .closest(".form-group")
-                    .removeClass("has-info")
-                    .addClass("has-error");
-                },
-      
-                success: function (e) {
-                  $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
-                  $(e).remove();
-                },
-      
-                errorPlacement: function (error, element) {
-                  if (
-                    element.is("input[type=checkbox]") ||
-                    element.is("input[type=radio]")
-                  ) {
-                    var controls = element.closest('div[class*="col-"]');
-                    if (controls.find(":checkbox,:radio").length > 1)
-                      controls.append(error);
-                    else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
-                  } else if (element.is(".select2")) {
-                    error.insertAfter(
-                      element.siblings('[class*="select2-container"]:eq(0)')
-                    );
-                  } else if (element.is(".chosen-select")) {
-                    error.insertAfter(
-                      element.siblings('[class*="chosen-container"]:eq(0)')
-                    );
-                  } else error.insertAfter(element.parent());
-                },
-      
-                submitHandler: function (form) {},
-                invalidHandler: function (form) {},
-              });
-      
-              $("#verification-form").validate({
-                errorElement: "div",
-                errorClass: "help-block",
-                focusInvalid: true,
-                ignore: "",
-                rules: {
-                  otp: {
-                    required: true,
-                    minlength: 5,
-                  },
-                },
-      
-                messages: {
-                  otp: {
-                    required: "Please enter 5 digit OTP send to your mobile.",
-                  },
-                },
-      
-                highlight: function (e) {
-                  $(e)
-                    .closest(".form-group")
-                    .removeClass("has-info")
-                    .addClass("has-error");
-                },
-      
-                success: function (e) {
-                  $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
-                  $(e).remove();
-                },
-      
-                errorPlacement: function (error, element) {
-                  if (
-                    element.is("input[type=checkbox]") ||
-                    element.is("input[type=radio]")
-                  ) {
-                    var controls = element.closest('div[class*="col-"]');
-                    if (controls.find(":checkbox,:radio").length > 1)
-                      controls.append(error);
-                    else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
-                  } else if (element.is(".select2")) {
-                    error.insertAfter(
-                      element.siblings('[class*="select2-container"]:eq(0)')
-                    );
-                  } else if (element.is(".chosen-select")) {
-                    error.insertAfter(
-                      element.siblings('[class*="chosen-container"]:eq(0)')
-                    );
-                  } else error.insertAfter(element.parent());
-                },
-      
-                submitHandler: function (form) {},
-                invalidHandler: function (form) {},
-              });
-      
-              $("#payment-form").validate({
-                errorElement: "div",
-                errorClass: "help-block",
-                focusInvalid: true,
-                ignore: "",
-                rules: {
-                  amount: {
-                    required: true,
-                  },
-                  bkashtrans: {
-                    required: true,
-                    minlength: 8
-                  },
-                  countercode: {
-                    required: true,
-                    minlength: 1
-                  },
-                },
-      
-                messages: {
-                  amount: {
-                    required: "Please enter valid payment amount.",
-                  },
-                  bkashtrans: {
-                    required: "Please enter bKash 8 digit Transaction Id send to your mobile.",
-                  },
-                  countercode: {
-                    required: "Please enter bKash 1 digit Counter Code send to your mobile.",
-                  },
-                },
-      
-                highlight: function (e) {
-                  $(e)
-                    .closest(".form-group")
-                    .removeClass("has-info")
-                    .addClass("has-error");
-                },
-      
-                success: function (e) {
-                  $(e).closest(".form-group").removeClass("has-error"); //.addClass('has-info');
-                  $(e).remove();
-                },
-      
-                errorPlacement: function (error, element) {
-                  if (
-                    element.is("input[type=checkbox]") ||
-                    element.is("input[type=radio]")
-                  ) {
-                    var controls = element.closest('div[class*="col-"]');
-                    if (controls.find(":checkbox,:radio").length > 1)
-                      controls.append(error);
-                    else error.insertAfter(element.nextAll(".lbl:eq(0)").eq(0));
-                  } else if (element.is(".select2")) {
-                    error.insertAfter(
-                      element.siblings('[class*="select2-container"]:eq(0)')
-                    );
-                  } else if (element.is(".chosen-select")) {
-                    error.insertAfter(
-                      element.siblings('[class*="chosen-container"]:eq(0)')
-                    );
-                  } else error.insertAfter(element.parent());
-                },
-      
-                submitHandler: function (form) {},
-                invalidHandler: function (form) {},
-              });
-      
-              $("#modal-wizard-container").ace_wizard();
-              $("#modal-wizard .wizard-actions .btn[data-dismiss=modal]").removeAttr(
-                "disabled"
-              );
-      
-              /**
-              $('#date').datepicker({autoclose:true}).on('changeDate', function(ev) {
-                $(this).closest('form').validate().element($(this));
-              });
-              
-              $('#mychosen').chosen().on('change', function(ev) {
-                $(this).closest('form').validate().element($(this));
-              });
-              */
-      
-              $(document).one("ajaxloadstart.page", function (e) {
-                //in ajax mode, remove remaining elements before leaving page
-                $("[class*=select2]").remove();
-              });
+
+                $("#modal-wizard-container").ace_wizard();
+                $("#modal-wizard .wizard-actions .btn[data-dismiss=modal]").removeAttr(
+                    "disabled"
+                );
+
+                /**
+                $('#date').datepicker({autoclose:true}).on('changeDate', function(ev) {
+                  $(this).closest('form').validate().element($(this));
+                });
+
+                $('#mychosen').chosen().on('change', function(ev) {
+                  $(this).closest('form').validate().element($(this));
+                });
+                */
+
+                $(document).one("ajaxloadstart.page", function (e) {
+                    //in ajax mode, remove remaining elements before leaving page
+                    $("[class*=select2]").remove();
+                });
             });
-          </script>
-      </div>
+        </script>
+        </div>
     </header>
     <!-- Login Section End -->
-
     <!-- Footer Section Start -->
     <footer class="footer-area">
-      <div class="footer-top-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mr-auto footer-link">
-              <div class="footer-logo-box">
-                <a href="#" class="footer-logo-link">
-                  <img src="assets/img/logo.png" class="img-fluid" alt="logo" />
-                </a>
-                <p>
-                  COVID-19 Risk Assessment and Information Management System.
-                </p>
-                <div class="footer-social-icon">
-                  <a href="#" class="icon"> <i class="fa fa-facebook"></i> </a>
-                  <a href="#" class="icon"> <i class="fa fa-twitter"></i> </a>
-                  <a href="#" class="icon"> <i class="fa fa-dribbble"></i> </a>
-                  <a href="#" class="icon"> <i class="fa fa-behance"></i> </a>
+        <div class="footer-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mr-auto footer-link">
+                        <div class="footer-logo-box">
+                            <a href="#" class="footer-logo-link">
+                                <img src="assets/img/logo.png" class="img-fluid" alt="logo" />
+                            </a>
+                            <p>
+                                COVID-19 Risk Assessment and Information Management System.
+                            </p>
+                            <div class="footer-social-icon">
+                                <a href="#" class="icon"> <i class="fa fa-facebook"></i> </a>
+                                <a href="#" class="icon"> <i class="fa fa-twitter"></i> </a>
+                                <a href="#" class="icon"> <i class="fa fa-dribbble"></i> </a>
+                                <a href="#" class="icon"> <i class="fa fa-behance"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-link">
+                        <h5>Quick Link</h5>
+                        <ul class="list-menu">
+                            <li><a href="#symptoms">Symptoms</a></li>
+                            <li><a href="#prevention">Prevention</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li>
+                                <a target="_" href="https://covid19.who.int/">WHO Dashboard</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-link">
+                        <h5>Covid Specialist Doctors</h5>
+                        <ul class="list-menu">
+                            <li><a href="#">Dr. Afsana Begum</a></li>
+                            <li><a href="#">Dr. Amina Sultana</a></li>
+                            <li><a href="#">Dr. Md. Iqbal Hossain</a></li>
+                            <li><a href="">Prof. Dr. Md. Omar Faruq</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-link footer-subscribe">
+                        <h5>Newsletter Subscription</h5>
+                        <form>
+                            <input type="Email"
+                                   name="email"
+                                   placeholder="Type Your Email" />
+                            <a href="#" class="subscribe-btn"><span>Subscribe</span></a>
+                        </form>
+                        <div class="footer-mobile-number footer-link">
+                            <h5>Emergency Contact</h5>
+                            <a href="tel:16263">16263</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-lg-2 col-md-6 footer-link">
-              <h5>Quick Link</h5>
-              <ul class="list-menu">
-                <li><a href="#symptoms">Symptoms</a></li>
-                <li><a href="#prevention">Prevention</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li>
-                  <a target="_" href="https://covid19.who.int/"
-                    >WHO Dashboard</a
-                  >
-                </li>
-              </ul>
+        </div>
+        <div class="copyright-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Copyright &copy; 2021 - All Right Reserved.</p>
+                        <p>
+                            Designed by
+                            <a target="_" href="http://cse.cub.edu.bd/cse/">CUB Spring-21 CSE-3306 Group-3</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-6 footer-link">
-              <h5>Covid Specialist Doctors</h5>
-              <ul class="list-menu">
-                <li><a href="#">Dr. Afsana Begum</a></li>
-                <li><a href="#">Dr. Amina Sultana</a></li>
-                <li><a href="#">Dr. Md. Iqbal Hossain</a></li>
-                <li><a href="">Prof. Dr. Md. Omar Faruq</a></li>
-              </ul>
+        </div>
+        <div class="footer-shape">
+            <div class="footer-shape-1">
+                <img src="assets/img/covid-shape-1.png" alt="image" />
             </div>
-            <div class="col-lg-3 col-md-6 footer-link footer-subscribe">
-              <h5>Newsletter Subscription</h5>
-              <form>
-                <input
-                  type="Email"
-                  name="email"
-                  placeholder="Type Your Email"
-                />
-                <a href="#" class="subscribe-btn"><span>Subscribe</span></a>
-              </form>
-              <div class="footer-mobile-number footer-link">
-                <h5>Emergency Contact</h5>
-                <a href="tel:16263">16263</a>
-              </div>
+            <div class="footer-shape-2">
+                <img src="assets/img/covid-shape-1.png" alt="image" />
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright-area text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <p>Copyright &copy; 2021 - All Right Reserved.</p>
-              <p>
-                Designed by
-                <a target="_" href="http://cse.cub.edu.bd/cse/"
-                  >CUB Spring-21 CSE-3306 Group-3</a
-                >
-              </p>
+            <div class="footer-shape-3">
+                <img src="assets/img/covid-shape-1.png" alt="image" />
             </div>
-          </div>
         </div>
-      </div>
-      <div class="footer-shape">
-        <div class="footer-shape-1">
-          <img src="assets/img/covid-shape-1.png" alt="image" />
-        </div>
-        <div class="footer-shape-2">
-          <img src="assets/img/covid-shape-1.png" alt="image" />
-        </div>
-        <div class="footer-shape-3">
-          <img src="assets/img/covid-shape-1.png" alt="image" />
-        </div>
-      </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Back to Top -->
-    <a href="#" class="back-to-top back-to-top-pulse"
-      ><i class="fa fa-caret-up"></i
-    ></a>
+    <a href="#" class="back-to-top back-to-top-pulse">
+        <i class="fa fa-caret-up"></i>
+    </a>
 
     <!-- Jquery Js-->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
@@ -1152,5 +1002,5 @@
     <script src="assets/js/plugins.js"></script>
     <!-- Site Main Js-->
     <script src="assets/js/main.js"></script>
-  </body>
+</body>
 </html>
