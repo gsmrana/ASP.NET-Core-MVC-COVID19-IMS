@@ -14,14 +14,14 @@
                     <div class="clearfix">
                         <div class="pull-right tableTools-container"></div>
                     </div>
+
                     <div class="table-header">
                         Latest Covid-19 Test Appointments
                     </div>
 
                     <div>
                         <!-- div.dataTables_borderWrap -->
-                        <table id="dynamic-table"
-                               class="table table-striped table-bordered table-hover">
+                        <table id="dynamic-table" class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th class="center">
@@ -1913,7 +1913,6 @@
         jQuery(function ($) {
             //initiate dataTables plugin
             var oTable1 = $("#dynamic-table")
-                //.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
                 .dataTable({
                     bAutoWidth: false,
                     aoColumns: [
@@ -1926,23 +1925,38 @@
                         { bSortable: false },
                     ],
                     aaSorting: [],
-
-                    //,
-                    //"sScrollY": "200px",
-                    //"bPaginate": false,
-
-                    //"sScrollX": "100%",
-                    //"sScrollXInner": "120%",
-                    //"bScrollCollapse": true,
-                    //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
-                    //you may want to wrap the table inside a "div.dataTables_borderWrap" element
-
-                    //"iDisplayLength": 50
                 });
-            //oTable1.fnAdjustColumnSizing();
 
             $("#dynamic-table_wrapper").css({
                 "display": "inline"
+            });
+
+            //console.log(oTable1);
+            //oTable1.fnClearTable();
+
+            //populate table data
+            $.ajax({
+                type: "GET",
+                url: "/api/CovidTestings",
+                contentType: "application/json",
+                data: "0",
+                success: function (data) {
+                    $.each(data, function (i, item) {
+                        oTable1.fnAddData({
+                            0: "",
+                            1: item["fullName"],
+                            2: item["mobileNo"],
+                            3: item["email"],
+                            4: item["appointmentDate"],
+                            5: item["status"],
+                            6: "",
+                        });
+                    });
+                },
+                error: function (response) {
+                    console.log(response);
+                    alert("Error: Failed to get data from server! " + response["responseText"]);
+                },
             });
 
             //TableTools settings
@@ -1982,7 +1996,7 @@
                         fnComplete: function () {
                             this.fnInfo(
                                 '<h3 class="no-margin-top smaller">Table copied</h3>\
-                                                                        <p>Copied ' +
+                                                                                                <p>Copied ' +
                                 oTable1.fnSettings().fnRecordsTotal() +
                                 " row(s) to the clipboard.</p>",
                                 1500
@@ -2017,9 +2031,9 @@
 
                         sInfo:
                             "<h3 class='no-margin-top'>Print view</h3>\
-                                                                          <p>Please use your browser's print function to\
-                                                                          print this table.\
-                                                                          <br />Press <b>escape</b> when finished.</p>",
+                                                                                                  <p>Please use your browser's print function to\
+                                                                                                  print this table.\
+                                                                                                  <br />Press <b>escape</b> when finished.</p>",
                     },
                 ],
             });

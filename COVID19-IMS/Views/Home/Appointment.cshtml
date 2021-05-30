@@ -3,12 +3,13 @@
     ViewData["Add-ace-styles"] = true;
 }
 
-<!-- Registration Section Start -->
+<!-- Appointment Section Start -->
 <header id="home" class="hero-equal-height overflow-hidden d-flex align-items-center">
     <div class="container">
         <div class="main-content">
             <div class="main-content-inner">
                 <div class="page-content">
+
                     <div class="widget-box">
                         <div class="widget-header widget-header-blue widget-header-flat">
                             <h4 class="widget-title">
@@ -222,22 +223,25 @@
 
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="state">Select Branch</label>
+                                                           for="apbranch">Select Branch</label>
 
                                                     <div class="col-xs-12 col-sm-9">
-                                                        <select id="state"
-                                                                name="state"
-                                                                class="select2"
-                                                                data-placeholder="Click to Choose...">
-                                                            <option value="">&nbsp;</option>
-                                                            <option value="BA">Badda</option>
-                                                            <option value="BN">Banani</option>
-                                                            <option value="DM">Dhanmondi</option>
-                                                            <option value="GL">Gulshan</option>
-                                                            <option value="MP">Mirpur</option>
-                                                            <option value="MK">Mohakhali</option>
-                                                            <option value="UT">Uttara</option>
-                                                        </select>
+                                                        <div class="clearfix">
+                                                            <select class="input-medium"
+                                                                    id="apbranch"
+                                                                    name="apbranch">
+                                                                <option value="">
+                                                                    Click to Choose...
+                                                                </option>
+                                                                <option value="BA">Badda</option>
+                                                                <option value="BN">Banani</option>
+                                                                <option value="DM">Dhanmondi</option>
+                                                                <option value="GL">Gulshan</option>
+                                                                <option value="MP">Mirpur</option>
+                                                                <option value="MK">Mohakhali</option>
+                                                                <option value="UT">Uttara</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -245,7 +249,7 @@
 
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="platform">Appointment Date</label>
+                                                           for="apdate">Appointment Date</label>
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
@@ -253,13 +257,13 @@
                                                                     id="apdate"
                                                                     name="apdate">
                                                                 <option value="">
-                                                                    ------/------/------
+                                                                    Click to Choose...
                                                                 </option>
-                                                                <option value="dt1">04/05/2021</option>
-                                                                <option value="dt2">05/05/2021</option>
-                                                                <option value="dt3">06/05/2021</option>
-                                                                <option value="dt4">07/05/2021</option>
-                                                                <option value="dt5">08/05/2021</option>
+                                                                <option value="dt1">04/06/2021</option>
+                                                                <option value="dt2">05/06/2021</option>
+                                                                <option value="dt3">06/06/2021</option>
+                                                                <option value="dt4">07/06/2021</option>
+                                                                <option value="dt5">08/06/2021</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -535,8 +539,34 @@
                     }
                 })
                 .on("finished.fu.wizard", function (e) {
-                    //location.href = 'index.htm';
-                    console.log("appointment")
+                    var covidTesting = {
+                        status: "-",
+                        fullName: $("#name").val(),
+                        email: $("#email").val(),
+                        nationalIdNo: $("#nid").val(),
+                        mobileNo: $("#phone").val(),
+                        homeAddress: $("#address").val(),
+                        age: $("#age").val(),
+                        gender: $("#gender").val(),
+                        appointmentBranch: $("#apbranch").val(),
+                        appointmentDate: $("#apdate").val(),
+                        remarks: $("#comment").val()
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/CovidTestings",
+                        contentType: "application/json",
+                        data: JSON.stringify(covidTesting),
+                        success: function (data) {
+                            console.log(data);
+                            location.href = "/";
+                        },
+                        error: function (response) {
+                            console.log(response);
+                            alert("Error: Failed to Submit! " + response["responseText"]);
+                        },
+                    });
                 })
                 .on("stepclick.fu.wizard", function (e) {
                     //e.preventDefault();//this will prevent clicking and selecting steps
@@ -570,15 +600,6 @@
                         required: true,
                         email: true,
                     },
-                    password: {
-                        required: true,
-                        minlength: 5,
-                    },
-                    password2: {
-                        required: true,
-                        minlength: 5,
-                        equalTo: "#password",
-                    },
                     name: {
                         required: true,
                     },
@@ -590,20 +611,7 @@
                         required: true,
                         minlength: 11
                     },
-                    url: {
-                        required: true,
-                        url: true,
-                    },
-                    comment: {
-                        required: false,
-                    },
-                    state: {
-                        required: true,
-                    },
-                    platform: {
-                        required: true,
-                    },
-                    subscription: {
+                    address: {
                         required: true,
                     },
                     age: {
@@ -612,8 +620,17 @@
                     gender: {
                         required: true,
                     },
+                    subscription: {
+                        required: true,
+                    },
+                    apbranch: {
+                        required: true,
+                    },
                     apdate: {
                         required: true,
+                    },
+                    comment: {
+                        required: false,
                     },
                     agree: {
                         required: true,
@@ -621,15 +638,6 @@
                 },
 
                 messages: {
-                    email: {
-                        required: "Please provide a valid email.",
-                        email: "Please provide a valid email.",
-                    },
-                    password: {
-                        required: "Please specify a password.",
-                        minlength: "Please specify a secure password.",
-                    },
-                    state: "Please choose branch",
                     subscription: "Please choose at least one option",
                     gender: "Please choose gender",
                     agree: "Please accept our policy",
@@ -792,20 +800,13 @@
                 invalidHandler: function (form) { },
             });
 
-            $("#modal-wizard-container").ace_wizard();
-            $("#modal-wizard .wizard-actions .btn[data-dismiss=modal]").removeAttr(
-                "disabled"
-            );
+            //$('#apdate').datepicker({ autoclose: true }).on('changeDate', function (ev) {
+            //    $(this).closest('form').validate().element($(this));
+            //});
 
-            /**
-            $('#date').datepicker({autoclose:true}).on('changeDate', function(ev) {
-              $(this).closest('form').validate().element($(this));
-            });
-
-            $('#mychosen').chosen().on('change', function(ev) {
-              $(this).closest('form').validate().element($(this));
-            });
-            */
+            //$('#mychosen').chosen().on('change', function (ev) {
+            //    $(this).closest('form').validate().element($(this));
+            //});
 
             $(document).one("ajaxloadstart.page", function (e) {
                 //in ajax mode, remove remaining elements before leaving page
@@ -814,4 +815,5 @@
         });
     </script>
 </header>
+<!-- Appointment Section End -->
 

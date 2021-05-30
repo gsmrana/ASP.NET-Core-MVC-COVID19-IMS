@@ -459,9 +459,29 @@
             },
 
             submitHandler: function (form) {
-                console.log("login");
-                location.href = "/Home/Appointment";                
+                var appuser = {
+                    email: $("#lemail").val(),
+                    passwordHash: $("#lpassword").val(),
+                    fullName: "-",
+                    ruleName: "-"
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/AppUsers/Login",
+                    contentType: "application/json",
+                    data: JSON.stringify(appuser),
+                    success: function (data) {
+                        console.log(data);
+                        location.href = "/Home/Appointment";
+                    },
+                    error: function (response) {
+                        console.log(response);
+                        alert("Error: Invalid Credential!");
+                    },
+                });
             },
+
             invalidHandler: function (form) {
                 console.log("login-form validation fail");
             },
@@ -519,8 +539,27 @@
             },
 
             submitHandler: function (form) {
-                console.log("register");
-                location.href = "/Home/Login";  
+                var appuser = {
+                    fullName: $("#rfullname").val(),
+                    email: $("#remail").val(),
+                    passwordHash: $("#rpassword").val(),                    
+                    ruleName: "-"
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/AppUsers/Register",
+                    contentType: "application/json",
+                    data: JSON.stringify(appuser),
+                    success: function (data) {
+                        console.log(data);
+                        location.href = "/Home/Login";
+                    },
+                    error: function (response) {
+                        console.log(response);
+                        alert("Error: Failed to Register! " + response["responseText"]);
+                    },
+                });
             },
 
             invalidHandler: function (form) {
@@ -559,8 +598,27 @@
             },
 
             submitHandler: function (form) {
-                console.log("forgot");
-                location.href = "/Home/Login";  
+                var appuser = {
+                    email: $("#femail").val(),
+                    fullName: "-",
+                    passwordHash: "-",
+                    ruleName: "-"
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/AppUsers/ForgotPass",
+                    contentType: "application/json",
+                    data: JSON.stringify(appuser),
+                    success: function (data) {
+                        console.log(data);
+                        location.href = "/Home/Login";
+                    },
+                    error: function (response) {
+                        console.log(response);
+                        alert("Error: Failed Send Request!");
+                    },
+                });
             },
 
             invalidHandler: function (form) {

@@ -34,8 +34,24 @@ namespace COVID19IMS.ApiControllers
         public async Task<ActionResult<AppUser>> Login(AppUser appUser)
         {
             var loginUser = await _context.AppUsers
-                .FirstOrDefaultAsync(u => u.Email == appUser.Email && u.PasswordHash == appUser.PasswordHash);
+                .FirstOrDefaultAsync(u => 
+                u.Email == appUser.Email && 
+                u.PasswordHash == appUser.PasswordHash);
+
             if (loginUser == null)  return NotFound();
+            return loginUser;
+        }
+
+        // POST: api/AppUsers/ForgotPass
+        [HttpPost]
+        [Route("ForgotPass")]
+        public async Task<ActionResult<AppUser>> ForgotPass(AppUser appUser)
+        {
+            var loginUser = await _context.AppUsers
+                .FirstOrDefaultAsync(u =>
+                u.Email == appUser.Email);
+
+            if (loginUser == null) return NotFound();
             return loginUser;
         }
 
